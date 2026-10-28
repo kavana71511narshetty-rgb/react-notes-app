@@ -1,0 +1,165 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.notes-app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  color: #4f46e5;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.app-header p {
+  color: #6b7280;
+}
+
+.note-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.note-form label {
+  display: block;
+  font-weight: bold;
+  margin: 12px 0 8px;
+}
+
+.note-form input,
+.note-form textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  outline: 2px solid #a5b4fc;
+  border-color: #6366f1;
+}
+
+.note-form textarea {
+  resize: vertical;
+}
+
+.form-actions,
+.note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+.cancel-button {
+  background: #6b7280;
+}
+
+.notes-section {
+  margin-top: 35px;
+}
+
+.notes-section h2 {
+  margin-bottom: 20px;
+}
+
+.empty-message {
+  color: #6b7280;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.note-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #6366f1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  overflow-wrap: anywhere;
+}
+
+.note-card h3 {
+  margin-top: 0;
+  color: #3730a3;
+}
+
+.note-card p {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.note-actions {
+  margin-top: 18px;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 600px) {
+  .notes-app {
+    padding: 20px 12px;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .note-form {
+    padding: 18px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
